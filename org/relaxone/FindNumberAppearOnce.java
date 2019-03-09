@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class FindNumberAppearOnce {
 	
-	private static void findNumberAppearOnce(int[] array, int[] num1, int[] num2) {
+	public static void findNumberAppearOnce(int[] array, int[] num1, int[] num2) {
 		ArrayList<Integer> list = new ArrayList<>();
 		
 		for(int number: array) {

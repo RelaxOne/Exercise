@@ -17,8 +17,6 @@ public class IsSymmetrical {
 		} else {
 			return false;
 		}
-		System.out.println(leftList);
-		System.out.println(rightList);
 
 		if (leftList.size() != rightList.size())
 			return false;

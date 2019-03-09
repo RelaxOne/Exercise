@@ -44,18 +44,15 @@ public class PrintTreeNode {
 	}
 
 	public void serilizeTreeNode(TreeNode root, StringBuffer buffer) {
-		if (root == null)
+		if (root == null) {
 			buffer.append("#,");
+			return;
+		}
 		buffer.append(root.val);
 		buffer.append(",");
-		if (root.left != null)
-			serilizeTreeNode(root.left, buffer);
-		else
-			buffer.append("#,");
-		if (root.right != null)
-			serilizeTreeNode(root.right, buffer);
-		else
-			buffer.append("#,");
+
+		serilizeTreeNode(root.left, buffer);
+		serilizeTreeNode(root.right, buffer);
 	}
 
 	public TreeNode deSerilize(String str) {
@@ -64,10 +61,12 @@ public class PrintTreeNode {
 			return null;
 		return deSerilizeTreeNode(nodes);
 	}
+
 	private int index = -1;
+
 	public TreeNode deSerilizeTreeNode(String[] strs) {
 		index++;
-		if(!strs[index].equals("#")) {
+		if (!strs[index].equals("#")) {
 			TreeNode node = new TreeNode(Integer.parseInt(strs[index]));
 			node.left = deSerilizeTreeNode(strs);
 			node.right = deSerilizeTreeNode(strs);
@@ -76,7 +75,7 @@ public class PrintTreeNode {
 		return null;
 	}
 
- 	public static void main(String[] args) {
+	public static void main(String[] args) {
 		TreeNode root = new TreeNode(5);
 		TreeNode left1 = new TreeNode(6);
 		TreeNode right1 = new TreeNode(7);
@@ -109,11 +108,11 @@ public class PrintTreeNode {
 		PrintTreeNode nodeWithZ = new PrintTreeNode();
 		System.out.println(nodeWithZ.print(root));
 
-//		System.out.println(nodeWithZ.serilize(root));
-		
+		System.out.println(nodeWithZ.serilize(root));
+
 		String str = "5,6,8,#,#,9,#,#,7,15,#,#,10,#,#,";
 		TreeNode treeNode = nodeWithZ.deSerilize(str);
-		
+
 		System.out.println(nodeWithZ.print(treeNode));
 	}
 
