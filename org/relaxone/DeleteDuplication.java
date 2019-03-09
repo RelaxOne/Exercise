@@ -2,6 +2,8 @@ package org.relaxone;
 
 import java.util.ArrayList;
 
+import com.relaxone.common.ListNode;
+
 public class DeleteDuplication {
 
 	public ListNode deleteDuplication(ListNode pHead) {
