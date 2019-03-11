@@ -5,13 +5,13 @@ import java.util.Stack;
 
 import com.relaxone.common.ListNode;
 
+/**
+ * a. 从链表尾到链表头输出值到集合中，并返回该集合
+ * b. 利用一个栈临时存储数据，依次出栈到集合中
+ * @param listNode
+ * @return
+ */
 public class PrintListFromTailToHead_3 {
-	/**
-	 * a. 从链表尾到链表头输出值到集合中，并返回该集合
-	 * b. 利用一个栈临时存储数据，依次出栈到集合中
-	 * @param listNode
-	 * @return
-	 */
 	public ArrayList<Integer> printListFromTailToHead(ListNode listNode){
 		ArrayList<Integer> result = new ArrayList<>();
 		Stack<Integer> values = new Stack<>();

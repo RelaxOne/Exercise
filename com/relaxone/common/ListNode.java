@@ -6,6 +6,10 @@ public class ListNode {
 	public ListNode(int val){
 		this.val = val;
 	}
+	/**
+	 * 初始化一个链表
+	 * @return
+	 */
 	public static ListNode init() {
 		ListNode root = new ListNode(1);
 		ListNode root1 = new ListNode(2);
@@ -24,11 +28,14 @@ public class ListNode {
 		root6.next = null;
 		return root;
 	}
-	public static void printNode(TreeNode root) {
-		if(root == null)
-			return;
-		System.out.print(root.val + " ");
-		printNode(root.left);
-		printNode(root.right);
+	
+	public static void printNode(ListNode root) {
+		ListNode p = root;
+		while(p!=null) {
+			System.out.print(p.val + " ");
+			p = p.next;
+		}
+		System.out.println();
 	}
+	
 }

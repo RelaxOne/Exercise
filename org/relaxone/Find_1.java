@@ -1,13 +1,13 @@
 package org.relaxone;
 
+/**
+ * a. 在给定生序的二维数组中找到是否存在给定的值
+ * b. 从坐下角或者右上角开始查找, 将二维数组变成都是生序或者降序的数列
+ * @param target
+ * @param array
+ * @return
+ */
 public class Find_1 {
-	/**
-	 * a. 在给定生序的二维数组中找到是否存在给定的值
-	 * b. 从坐下角或者右上角开始查找, 将二维数组变成都是生序或者降序的数列
-	 * @param target
-	 * @param array
-	 * @return
-	 */
 	public boolean find(int target, int[][] array) {
 		if(array.length == 0)
 			return false;

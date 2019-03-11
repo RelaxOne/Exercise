@@ -1,11 +1,11 @@
 package org.relaxone;
 
+/**
+ * a. 将字符串中的空格替换成 %20
+ * @param str
+ * @return
+ */
 public class ReplaceSpace_2 {
-	/**
-	 * a. 将字符串中的空格替换成 %20
-	 * @param str
-	 * @return
-	 */
 	public String replaceSpace(StringBuffer str) {
 		StringBuffer result = new StringBuffer();
 		for(int i = 0; i< str.length(); i++) {
